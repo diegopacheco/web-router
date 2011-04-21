@@ -80,7 +80,7 @@ public class Router {
 		return "Routes \n" + fromMapStructureToString(routes);
 	}
 
-	private String fromMapStructureToString(Map<String, Resource> routes2) {
+	public static String fromMapStructureToString(Map<String, Resource> routes2) {
 		
 		StringBuffer sb = new StringBuffer();
 		for(String key: routes2.keySet()){

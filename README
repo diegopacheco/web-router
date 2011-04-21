@@ -1,1 +1,53 @@
-DSL for web routing
+STATUS: beta, not working yeat, listing routes only on /routes
+UPDATE: 21/04/2011 around 03:33
+
+This project has a simply and small goal. 
+
+The idea is you can create routes in your java application, this small library is inspired by
+rails 3 routings model. You can route to Servlets, Jsp Pages and Statis resources like html and text.
+
+Here is a sample:
+
+public class MyRouter extends WebRouter {
+
+	public Router define(){
+		return Router.route()
+				  
+				  .from("/crud/people")
+				  .toJsp("peoplecrud.jsp")
+				  
+				  .from("/crud/admin")
+				  .toServlet("com.servlets.admin.AdminServlet")
+				  
+			   ;
+	}
+}
+		
+As you can you have a simple and nice DSL, this is from definition and execution BUT I don't do
+registry, in other words you must hava register you servlets and jsp pages.
+
+Configuration:
+
+In your java web project(war) you just define the servlet:
+
+	<servlet>
+		<servlet-name>WebRouterServlet</servlet-name>
+		<servlet-class>com.github.diegopacheco.webrouter.servlet.WebRouterServlet</servlet-class>
+		<init-param>
+			<param-name>router</param-name>
+			<param-value>com.github.diegopacheco.webrouter.router.MyRouter</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>						
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WebRouterServlet</servlet-name>
+		<url-pattern>/*</url-pattern>		
+	</servlet-mapping>
+	
+*router* is your router class showed above. So now you are ready to fun :-) 
+You can see all avaliable routes just goto your browser and type http://localhost:8080/yourApplication/routes
+
+Cheers,
+Diego Pacheco
+twitter: @diego_pacheco
+blog   : http://diego=pacheco.blogspot.com
