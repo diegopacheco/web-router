@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="web-router-core-test">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
+        <wb-resource deploy-path="/WEB-INF/"        source-path="/web-router-core-test/target/web-router-core-test-1.0-SNAPSHOT/WEB-INF" />
+		<wb-resource deploy-path="/WEB-INF/lib"     source-path="/web-router-core-test/target/web-router-core-test-1.0-SNAPSHOT/WEB-INF/lib" />
+        <property name="context-root" value="web-router-core-test"/>
+        <property name="java-output-path" value="/web-router-core-test/target/web-router-core-test-1.0-SNAPSHOT"/>
+    </wb-module>
+</project-modules>

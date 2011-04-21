@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app id="WebRouterTestApp" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+						http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<servlet>
+		<servlet-name>WebRouterServlet</servlet-name>
+		<servlet-class>com.github.diegopacheco.webrouter.servlet.WebRouterServlet</servlet-class>
+		<init-param>
+			<param-name>router</param-name>
+			<param-value>com.github.diegopacheco.webrouter.router.MyRouter</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>						
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WebRouterServlet</servlet-name>
+		<url-pattern>/*</url-pattern>		
+	</servlet-mapping>
+
+</web-app>
