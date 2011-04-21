@@ -18,5 +18,10 @@
 		<servlet-name>WebRouterServlet</servlet-name>
 		<url-pattern>/*</url-pattern>		
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>MyServlet</servlet-name>
+		<servlet-class>com.github.diegopacheco.webrouter.servlet.MyServlet</servlet-class>
+	</servlet>
 
 </web-app>

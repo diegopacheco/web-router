@@ -53,7 +53,7 @@ public class Router {
 	}
 	
 	public Router toJsp(String to){
-		Resource r = new Resource(to,ResourceType.SERVLET);
+		Resource r = new Resource(to,ResourceType.JSP);
 		addTo(r);
 		return this;
 	}

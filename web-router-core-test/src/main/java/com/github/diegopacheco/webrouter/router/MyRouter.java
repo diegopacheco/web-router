@@ -15,11 +15,11 @@ public class MyRouter extends WebRouter {
 	public Router define(){
 		return Router.route()
 				  
-				  .from("/crud/people")
-				  .toJsp("peoplecrud.jsp")
+				  .from("/ser/hello")
+				  .toServlet("MyServlet")
 				  
-				  .from("/crud/admin")
-				  .toServlet("com.servlets.admin.AdminServlet")
+				  .from("/pages/jsp")
+				  .toJsp("/myJsp.jsp")
 				  
 			   ;
 	}
